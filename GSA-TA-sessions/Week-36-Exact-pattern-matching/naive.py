@@ -27,16 +27,16 @@ def exact_naive(substr,refseq):
     match = []
     matches = []
     i,j,k = 0,0,0
-    while j < (len(ref)-len(substr)): #break when we reach the end of the sequence
-        if substr[i] == ref[j]:
+    while j < (len(refseq)-len(substr)): #break when we reach the end of the sequence
+        if substr[i] == refseq[j]:
             k = j # We want to save j
-            while len(match) != len(substr) and substr[i] == ref[k]:
+            while len(match) != len(substr) and substr[i] == refseq[k]:
                 match.append(substr[i])
                 k+=1
                 i+=1
 
-            if i = len(substr)-1: # if a match is found
-                matches.append([k, match])
+            if i == len(substr): # if a match is found
+                matches.append([j, match])
                 i = 0
                 j += 1 # We want to look at the next letter in j, from where we found the previous match
 
@@ -50,6 +50,6 @@ def exact_naive(substr,refseq):
     return matches
 
 
-if __name__ == '__main__':
-    res = exact_naive(substr, refseq)
-    print(res)
+
+res = exact_naive(substr, refseq)
+print(res)
