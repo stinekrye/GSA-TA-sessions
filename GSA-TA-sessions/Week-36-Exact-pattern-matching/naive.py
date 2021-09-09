@@ -21,13 +21,13 @@
 
 
 substr = "abc"
-refseq = "eabcu"
+refseq = "abchhhabc"
 
 def exact_naive(substr,refseq):
     match = []
     matches = []
     i,j,k = 0,0,0
-    while j < (len(refseq)-len(substr)): #break when we reach the end of the sequence
+    while j <= (len(refseq)-len(substr)): #break when we reach the end of the sequence
         if substr[i] == refseq[j]:
             k = j # We want to save j
             while len(match) != len(substr) and substr[i] == refseq[k]:
@@ -39,10 +39,12 @@ def exact_naive(substr,refseq):
                 matches.append([j, match])
                 i = 0
                 j += 1 # We want to look at the next letter in j, from where we found the previous match
+                match = []
 
             else:
                 i = 0
                 j += 1 # We want to look at the next letter in j, from where we found the previous match
+                match = []
 
 
         else:
