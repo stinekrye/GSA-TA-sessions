@@ -1,6 +1,7 @@
 # Inexact pattern matching: The algorithmic idea
     # Given a string A we can generate n strings which are closely related to A. (The size of n depends on the magnitude of the edit distance. Proportional)
     # We can then search for all the n strings
+    # We can use the cigar string(s) to search instead of generating all kind of sequences
 
 
 # 1: That depends on the edit distance.
@@ -15,15 +16,23 @@
     # f(2) = l*4^2 + l^2 + l*4^2
     # f(n) = l*4^n + l^n + l*4^n  -> 2*l4^n + l^n
 
+
+    # From the class
+        # Rekursionen er anderledes
+
+
     # Is there a quick way to generate all possible cigar strings?
         # I have tried to adjust Thomas' script, but has ot been succesfull
 
 # 3 The asymptotic complexity is  O(n^d) (the length of the sequence to the power of edit distance) (very loose)
 
-# 4 The upper bound is especially important
+# 4 The lower bound. If we know it can't get better than this, and it is bad, we need to find another solution
 
 # Not sure what is meant by implementing the recursion
     # End up with a plot with sting length, number of strings generated at a given edit distance (this is three variables
+
+
+# Implement something which generates all possible cigar stings and strings of a certain edit distance
 
 
 

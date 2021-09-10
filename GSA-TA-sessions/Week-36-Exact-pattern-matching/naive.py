@@ -7,7 +7,11 @@
 # Warm up
 # 1: How would I test the correctness of the algorithm?
     # Make a "test-suite" which has a lot of substrings and reference sequences to match
-    # Make a test, which checks how the indexes are moved around
+        # Start with simple cases, then build a test suite
+        # Good idea to make this random, and sample subsequences at specific indexes. Or generate sequences with a specific edit distance from a template
+        # Write special cases by hand (empty strings, strings with same character, prefix and suffix)
+        # Use classes of strings, which are different: Random, repetitive (fibonnaci?)
+        # Compare to already working algorithms
 
 # 2: How would you use that naive algorithm to test a more sophisticated algorithm?
     # I would check if they find the same matches?
@@ -15,6 +19,8 @@
 
 # 3a: How do you test the running time of an algorithm?
     # Feed it input of different lengths, measure the time and make a graph
+    # For each alg make a graph with time/expeced runningtime* as a function of n, with different lines for m
+        # How can we derive the expected running time?
 
 # Implementation of the naïve algorithm
     # What output is desired? I decide to only output the match and the pythonic index of the match
