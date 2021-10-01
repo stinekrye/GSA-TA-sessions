@@ -2,7 +2,7 @@
 # I need to insert string labels and edge labels
 class Node():
     def __init__(self, val, parent = None, edge_label = None, string_label = None, siblings = None, children = None, children_val = None):
-        self.val = val
+        self.val = val # This is the edge_label
         self.parent = None
         self.edge_label = None
         self.string_label = None
@@ -94,10 +94,11 @@ j = 1
 # print(test.nodes)
 # print(test.nodes[i])
 # print(test.nodes[i][j].siblings)
-print(test[4])
-print("next")
-for i in test:
-    print(i)
+# print(test[4])
+# print("next")
+# for i in test:
+#     print(i)
+print(test)
 #############################################################
     # def __insert__(self, val, parent):
     #     node = Node(val, parent)
